@@ -2,6 +2,9 @@
   "name": "smufl-glyphs-info",
   "version": "0.1.0",
   "description": "Glyph data for the SMuFL specification for use inside Glyphs.app",
+  "bin": {
+    "smufl-glyphs": "./bin/cli.js"
+  },
   "napa": {
     "smufl": "w3c/smufl"
   },
