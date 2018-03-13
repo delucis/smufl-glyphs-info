@@ -26,5 +26,8 @@
     "xmlbuilder": "^9.0.7"
   },
   "dependencies": {
+    "clorox": "^1.0.3",
+    "commander": "^2.15.0",
+    "prompts": "^0.1.8"
   }
 }
