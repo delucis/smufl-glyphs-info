@@ -8,6 +8,11 @@
   "bin": {
     "smufl-glyphs": "./bin/cli.js"
   },
+  "scripts": {
+    "install": "napa",
+    "build": "node lib/build.js",
+    "prepublishOnly": "npm run build"
+  },
   "napa": {
     "smufl": "w3c/smufl"
   },
