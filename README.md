@@ -1,5 +1,9 @@
 # SMuFL Glyphs Info
 
+[![npm](https://img.shields.io/npm/v/smufl-glyphs-info.svg?style=for-the-badge)](https://www.npmjs.com/package/smufl-glyphs-info)
+[![GitHub issues](https://img.shields.io/github/issues/delucis/smufl-glyphs-info.svg?style=for-the-badge&logo=github)](https://github.com/delucis/smufl-glyphs-info/issues)
+
+
 This package provides support files for use with the [Glyphs](https://glyphsapp.com/) font editing software that make it easier to develop fonts to the [SMuFL](https://www.smufl.org/) (Standard Music Font Layout) [specification](https://w3c.github.io/smufl/gitbook/).
 
 It also includes a command line interface to help speed up installation of these support files.
