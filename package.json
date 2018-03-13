@@ -1,0 +1,22 @@
+{
+  "name": "smufl-glyphs-info",
+  "version": "0.1.0",
+  "description": "Glyph data for the SMuFL specification for use inside Glyphs.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delucis/smufl-glyphs-info.git"
+  },
+  "keywords": [
+    "smufl",
+    "glyphs",
+    "metadata"
+  ],
+  "author": "Chris Swithinbank <swithinbank@gmail.com> (http://chrisswithinbank.net/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/delucis/smufl-glyphs-info/issues"
+  },
+  "homepage": "https://github.com/delucis/smufl-glyphs-info#readme",
+  "dependencies": {
+  }
+}
