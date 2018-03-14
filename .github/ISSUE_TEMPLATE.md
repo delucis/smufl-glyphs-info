@@ -12,6 +12,6 @@
 
 ### Could you give us a few last details?
 
-- I’m using Glyphs version:                           [e.g. 1.3, 2, 2.4…]
-- I’m running `smufl-glyphs-info` on:                 [Windows / Mac version…]
-- My favourite ice cream flavour is:                  [ALL OF THEM]
+- I’m using Glyphs version:                                ~~e.g. 1.3, 2, 2.4…~~
+- I’m running `smufl-glyphs-info` on:              ~~Windows / Mac version…~~
+- My favourite ice cream flavour is:                    ~~ALL OF THEM~~
