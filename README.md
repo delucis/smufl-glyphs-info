@@ -115,3 +115,10 @@ Please check out [the contribution guide](CONTRIBUTING.md) for more details, and
 ## License
 
 This software is free to use, modify, and redistribute under a [GNU General Public License](LICENSE).
+
+## Useful Links
+
+- Rainer Erich Scheichelbauer, [_Glyphs Tutorial: Roll Your Own Glyph Data_](https://glyphsapp.com/tutorials/roll-your-own-glyph-data)
+- Rainer Erich Scheichelbauer, [_Glyphs Tutorial: Custom Sidebar Entries in Font View_](https://glyphsapp.com/tutorials/custom-sidebar-entries-in-font-view)
+- Edirom/Peter Stadler, [_SMuFL-Browser_](http://edirom.de/smufl-browser/index.html)
+- W3C, [‘Metadata for SMuFL glyphs and ranges,’](https://w3c.github.io/smufl/gitbook/specification/smufl-metadata.html) in: [_Standard Music Font Layout (SMuFL)_](https://w3c.github.io/smufl/gitbook/index.html)
