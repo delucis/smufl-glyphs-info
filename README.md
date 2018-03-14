@@ -71,7 +71,7 @@ This package provides:
 
 1. [`GlyphData.xml`](dist/GlyphData.xml), which describes all of the glyphs defined in the SMuFL specification’s [`glyphnames.json`][dcbb20f3] so that Glyphs can understand these nonstandard codepoints.
 
-2. [`Groups.plist`](dist/Groups.plist), which defines a custom `SMuFL Ranges` category in Glyphs’ left sidebar with sub-categories for each unicode range specified in the SMuFL specification’s [`ranges.json`][442459d7].
+2. [`Groups.plist`](dist/Groups.plist), which defines a custom `SMuFL` category in Glyphs’ left sidebar with sub-categories for each unicode range specified in the SMuFL specification’s [`ranges.json`][442459d7].
 
   [dcbb20f3]: https://w3c.github.io/smufl/gitbook/specification/glyphnames.html "Information about glyphnames.json from the SMuFL specification"
   [442459d7]: https://w3c.github.io/smufl/gitbook/specification/ranges.html "Information about ranges.json from the SMuFL specification"
