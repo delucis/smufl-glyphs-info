@@ -6,9 +6,9 @@
     <array>
       <dict>
         <key>name</key>
-        <string>SMuFL Ranges</string>
+        <string>SMuFL</string>
         <key>icon</key>
-        <string>smuflTemplate</string>
+        <string>MusicTemplate</string>
         <key>subGroup</key>
         <array>
           <dict>
