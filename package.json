@@ -8,6 +8,10 @@
   "bin": {
     "smufl-glyphs": "./bin/cli.js"
   },
+  "files": [
+    "bin/*",
+    "dist/*"
+  ],
   "scripts": {
     "build": "napa && node lib/build.js",
     "version": "npm run build",
