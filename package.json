@@ -37,7 +37,7 @@
   "homepage": "https://github.com/delucis/smufl-glyphs-info#readme",
   "devDependencies": {
     "napa": "^3.0.0",
-    "plist": "^2.1.0",
+    "plist": "^3.0.4",
     "xmlbuilder": "^9.0.7"
   },
   "dependencies": {
