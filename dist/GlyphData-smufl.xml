@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE glyphData [
-<!ELEMENT glyphData (glyph)+>
-<!ELEMENT glyph EMPTY>
-<!ATTLIST glyph
-	unicode			CDATA		#IMPLIED
-	unicodeLegacy	CDATA		#IMPLIED
-	name			CDATA		#REQUIRED
-	sortName		CDATA		#IMPLIED
-	sortNameKeep	CDATA		#IMPLIED
-	category		CDATA		#REQUIRED
-	subCategory		CDATA		#IMPLIED
-	script			CDATA		#IMPLIED
-	description		CDATA		#IMPLIED
-	production		CDATA		#IMPLIED
-	altNames		CDATA		#IMPLIED
-	decompose		CDATA		#IMPLIED
-	anchors			CDATA		#IMPLIED
-	accents			CDATA		#IMPLIED>
+	<!ELEMENT glyphData (glyph)+>
+	<!ELEMENT glyph EMPTY>
+	<!ATTLIST glyph unicode CDATA #IMPLIED>
+	<!ATTLIST glyph unicodeLegacy CDATA #IMPLIED>
+	<!ATTLIST glyph name CDATA #REQUIRED>
+	<!ATTLIST glyph sortName CDATA #IMPLIED>
+	<!ATTLIST glyph sortNameKeep CDATA #IMPLIED>
+	<!ATTLIST glyph category CDATA #REQUIRED>
+	<!ATTLIST glyph subCategory CDATA #IMPLIED>
+	<!ATTLIST glyph script CDATA #IMPLIED>
+	<!ATTLIST glyph description CDATA #IMPLIED>
+	<!ATTLIST glyph production CDATA #IMPLIED>
+	<!ATTLIST glyph altNames CDATA #IMPLIED>
+	<!ATTLIST glyph decompose CDATA #IMPLIED>
+	<!ATTLIST glyph anchors CDATA #IMPLIED>
+	<!ATTLIST glyph accents CDATA #IMPLIED>
 ]>
 <glyphData>
 	<glyph unicode="E06E" name="4stringTabClef" sortName="SMuFL.4stringTabClef" category="Clefs" script="SMuFL" production="uniE06E" description="4-STRING TAB CLEF" />
