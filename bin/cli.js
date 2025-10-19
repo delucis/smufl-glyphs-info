@@ -1,22 +1,20 @@
 #!/usr/bin/env node
 
 // core Node imports
-const FS = require('fs')
-const PATH = require('path')
-const UTIL = require('util')
+import FS from 'node:fs/promises'
+import PATH from 'node:path'
+import { styleText } from 'node:util'
 
 // required libraries
-const PROGRAM = require('commander')
-const PROMPTS = require('prompts')
-const CLOROX = require('clorox')
+import PROGRAM from 'commander'
+import PROMPTS from 'prompts'
+import { type } from 'node:os'
+import { fileURLToPath } from 'node:url'
 
 // promise wrappers around file system operations
-const MKDIR = UTIL.promisify(FS.mkdir)
-const COPY = UTIL.promisify(FS.copyFile)
-const READF = UTIL.promisify(FS.readFile)
-
-// local variables
-const V = require('../package.json').version
+const MKDIR = FS.mkdir;
+const COPY = FS.copyFile;
+const READF = FS.readFile;
 
 /*
 ███████ ██    ██ ███    ██  ██████ ████████ ██  ██████  ███    ██
@@ -36,14 +34,17 @@ const V = require('../package.json').version
 // Wrappers around console loggers for prettier formatting
 const PAD = '    '
 
+/** @param {string} err */
 function error (err) {
-  console.error(PAD + `${CLOROX.bold.white.bgRed(' ERROR ')} ${err}`)
+  console.error(PAD + `${styleText(['bold', 'white', 'bgRed'], ' ERROR ')} ${err}`)
 }
+/** @param {string} warning */
 function warn (warning) {
-  console.warn(PAD + `${CLOROX.bold.yellow.inverse(' WARN ')}  ${warning}`)
+  console.warn(PAD + `${styleText(['bold', 'black', 'bgYellow'], ' WARN ')}  ${warning}`)
 }
+/** @param {string} msg */
 function info (msg) {
-  console.error(PAD + `${CLOROX.bold.white.bgBlue(' INFO ')}  ${msg}`)
+  console.error(PAD + `${styleText(['bold', 'white', 'bgBlue'], ' INFO ')}  ${msg}`)
 }
 
 /**
@@ -66,10 +67,16 @@ async function startPrompt () {
 async function install ({ force = false } = {}) {
   if (force) warn('Installing with --force flag. Any checks for conflicts will be skipped.')
 
+  const __dirname = fileURLToPath(new URL('.', import.meta.url));
   const FILES = [
     '../dist/GlyphData-smufl.xml',
     '../dist/Groups-smufl.plist'
   ].map(path => PATH.join(__dirname, path))
+
+  if (!process.env.HOME) {
+    error('Could not determine home directory. Please open an issue: https://github.com/delucis/smufl-glyphs-info')
+    process.exit(1)
+  }
 
   const DEST = PATH.join(
     process.env.HOME,
@@ -101,7 +108,7 @@ async function install ({ force = false } = {}) {
  * @param  {Boolean}  [overwrite=true] Should existing files be overwritten?
  */
 async function copyResources (files = [], dest = '', overwrite = true) {
-  const flag = overwrite ? null : FS.constants.COPYFILE_EXCL
+  const flag = overwrite ? undefined : FS.constants.COPYFILE_EXCL
 
   await Promise.all(files.map(async file => {
     let fname = PATH.basename(file)
@@ -116,10 +123,13 @@ async function copyResources (files = [], dest = '', overwrite = true) {
  * @param  {String}   [dest='']  The destination directory to copy to.
  */
 async function copySafely (files = [], dest = '') {
+  /** @type {Array<{ file: string, xml?: string }>} */
   let conflicts = []
+  /** @type {string[]} */
   let safeFiles = []
 
   await Promise.all(files.map(async file => {
+    /** @type { { file: string, xml?: string } } */
     let data = { file }
     let exists = true
     let fname = PATH.basename(file)
@@ -143,11 +153,13 @@ async function copySafely (files = [], dest = '') {
 
 /**
  * Try to resolve conflicts while copying files, falling back to user input.
- * @param  {Object[]} conflicts Array of objects describing conflicting files.
- * @param  {String}   dest      The destination directory to copy to.
+ * @param {{ file: string, xml?: string }[]} conflicts Array of objects describing conflicting files.
+ * @param {string} dest The destination directory to copy to.
  */
 async function resolveConflicts (conflicts, dest) {
+  /** @type {Array<{ file: string, xml?: string }>} */
   let skippable = []
+  /** @type {Array<{ file: string, xml?: string }>} */
   let clashing = []
 
   await Promise.all(conflicts.map(async conflict => {
@@ -166,11 +178,11 @@ async function resolveConflicts (conflicts, dest) {
 
   let prompts = clashing.map(conflict => {
     let fname = PATH.basename(conflict.file)
-    return {
+    return /** @type const */ ({
       type: 'confirm',
       name: conflict.file,
       message: `A different ${fname} was found. Are you sure you want to overwrite it?`
-    }
+    })
   })
 
   let answers = await PROMPTS(prompts)
@@ -202,14 +214,13 @@ async function resolveConflicts (conflicts, dest) {
 if (process.platform !== 'darwin') {
   error('This script is designed for use on macOS only.')
   console.info(`        Running on macOS and seeing this error?
-        Please open an issue at ${CLOROX.underline('https://github.com/delucis/smufl-glyphs-info')}`
+        Please open an issue at ${styleText(['underline'], 'https://github.com/delucis/smufl-glyphs-info')}`
   )
   process.exit(1)
 }
 
 PROGRAM
   .name('smufl-glyphs')
-  .version(V, '-v, --version')
   .option('-f, --force', 'install SMuFl support without user input, overwriting any existing files')
   .on('--help', () => {
     console.log(`
