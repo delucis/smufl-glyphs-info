@@ -2,6 +2,7 @@
   "name": "smufl-glyphs-info",
   "version": "0.5.1",
   "description": "Glyph data for the SMuFL specification for use inside Glyphs.app",
+  "type": "module",
   "os": [
     "darwin"
   ],
@@ -13,12 +14,9 @@
     "dist/*"
   ],
   "scripts": {
-    "build": "napa && node lib/build.js",
+    "build": "node lib/build.js",
     "version": "npm run build",
     "prepublishOnly": "npm run build"
-  },
-  "napa": {
-    "smufl": "w3c/smufl"
   },
   "repository": {
     "type": "git",
@@ -36,9 +34,8 @@
   },
   "homepage": "https://github.com/delucis/smufl-glyphs-info#readme",
   "devDependencies": {
-    "napa": "^3.0.0",
-    "plist": "^3.0.4",
-    "xmlbuilder": "^9.0.7"
+    "plist": "^3.1.0",
+    "xmlbuilder": "^15.1.1"
   },
   "dependencies": {
     "clorox": "^1.0.3",
