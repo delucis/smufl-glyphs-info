@@ -80,7 +80,7 @@ async function install ({ force = false } = {}) {
 
   const DEST = PATH.join(
     process.env.HOME,
-    'Library/Application Support/Glyphs/Info'
+    'Library/Application Support/Glyphs 3/Info'
   )
 
   let destExists = false
