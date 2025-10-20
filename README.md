@@ -51,7 +51,7 @@ To install the support files using the command line interface run the following 
 smufl-glyphs
 ```
 
-Follow the on-screen prompts to complete the installation. If you have existing `GlyphData.xml` or `Groups.plist` files, you will be asked if you want to overwrite them.
+Follow the on-screen prompts to complete the installation. If you have existing `GlyphData-smufl.xml` or `Groups-smufl.plist` files, you will be asked if you want to overwrite them.
 
 More information on how to use the `smufl-glyphs` command can be found by running:
 
@@ -62,16 +62,16 @@ smufl-glyphs --help
 
 ## Details
 
-The Glyphs font editing software allows for the [expansion of its standard glyph database][0848a1b2] and [custom categorisation in its left sidebar][ab9bad53] by providing custom `GlyphData.xml` and `Groups.plist` files.
+The Glyphs font editing software allows for the [expansion of its standard glyph database][0848a1b2] and [custom categorisation in its left sidebar][ab9bad53] by providing custom `GlyphData-smufl.xml` and `Groups-smufl.plist` files.
 
   [0848a1b2]: https://glyphsapp.com/tutorials/roll-your-own-glyph-data "Roll Your Own Glyph Data - Tutorial on glyphsapp.com"
   [ab9bad53]: https://glyphsapp.com/tutorials/custom-sidebar-entries-in-font-view "Custom Sidebar Entries in Font View - Tutorial on glyphsapp.com"
 
 This package provides:
 
-1. [`GlyphData.xml`](dist/GlyphData.xml), which describes all of the glyphs defined in the SMuFL specification’s [`glyphnames.json`][dcbb20f3] so that Glyphs can understand these nonstandard codepoints.
+1. [`GlyphData-smufl.xml`](dist/GlyphData-smufl.xml), which describes all of the glyphs defined in the SMuFL specification’s [`glyphnames.json`][dcbb20f3] so that Glyphs can understand these nonstandard codepoints.
 
-2. [`Groups.plist`](dist/Groups.plist), which defines a custom `SMuFL` category in Glyphs’ left sidebar with sub-categories for each unicode range specified in the SMuFL specification’s [`ranges.json`][442459d7].
+2. [`Groups-smufl.plist`](dist/Groups-smufl.plist), which defines a custom `SMuFL` category in Glyphs’ left sidebar with sub-categories for each unicode range specified in the SMuFL specification’s [`ranges.json`][442459d7].
 
   [dcbb20f3]: https://w3c.github.io/smufl/gitbook/specification/glyphnames.html "Information about glyphnames.json from the SMuFL specification"
   [442459d7]: https://w3c.github.io/smufl/gitbook/specification/ranges.html "Information about ranges.json from the SMuFL specification"
@@ -91,7 +91,7 @@ You can find Glyphs’ `Application Support` directory at: `/Users/YOUR-USER-NAM
 
 One quick way to find this is to open Glyphs and select **Script** > **Open Scripts Folder**.
 
-If it doesn’t exist, you should create an `Info` directory alongside the `Scripts` directory to put `GlyphData.xml` and `Groups.plist` in.
+If it doesn’t exist, you should create an `Info` directory alongside the `Scripts` directory to put `GlyphData-smufl.xml` and `Groups-smufl.plist` in.
 
 You should end up with a directory structure like this:
 
@@ -99,8 +99,8 @@ You should end up with a directory structure like this:
     └── Application Support
         └── Glyphs
             ├── Info
-            │   ├── GlyphData.xml
-            │   └── Groups.plist
+            │   ├── GlyphData-smufl.xml
+            │   └── Groups-smufl.plist
             ├── Scripts
             └── ...
 

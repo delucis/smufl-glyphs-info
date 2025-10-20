@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
-    <key>categories</key>
+    <key>languages</key>
     <array>
       <dict>
         <key>name</key>
@@ -14,7 +14,7 @@
           <dict>
             <key>name</key>
             <string>Accordion</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accdnRH3RanksPiccolo</string>
               <string>accdnRH3RanksClarinet</string>
@@ -76,7 +76,7 @@
           <dict>
             <key>name</key>
             <string>Analytics</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>analyticsHauptstimme</string>
               <string>analyticsNebenstimme</string>
@@ -95,7 +95,7 @@
           <dict>
             <key>name</key>
             <string>Arabic accidentals</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accidentalDoubleFlatArabic</string>
               <string>accidentalThreeQuarterTonesFlatArabic</string>
@@ -111,7 +111,7 @@
           <dict>
             <key>name</key>
             <string>Arel-Ezgi-Uzdilek (AEU) accidentals</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accidentalBuyukMucennebFlat</string>
               <string>accidentalKucukMucennebFlat</string>
@@ -126,7 +126,7 @@
           <dict>
             <key>name</key>
             <string>Arrows and arrowheads</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>arrowBlackUp</string>
               <string>arrowBlackUpRight</string>
@@ -181,7 +181,7 @@
           <dict>
             <key>name</key>
             <string>Articulation</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>articAccentAbove</string>
               <string>articAccentBelow</string>
@@ -218,7 +218,7 @@
           <dict>
             <key>name</key>
             <string>Articulation supplement</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>articSoftAccentAbove</string>
               <string>articSoftAccentBelow</string>
@@ -233,7 +233,7 @@
           <dict>
             <key>name</key>
             <string>Athenian Sagittal extension (medium precision) accidentals</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accSagittal7v11KleismaUp</string>
               <string>accSagittal7v11KleismaDown</string>
@@ -280,7 +280,7 @@
           <dict>
             <key>name</key>
             <string>Bar repeats</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>repeat1Bar</string>
               <string>repeat2Bars</string>
@@ -293,7 +293,7 @@
           <dict>
             <key>name</key>
             <string>Barlines</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>barlineSingle</string>
               <string>barlineDouble</string>
@@ -310,7 +310,7 @@
           <dict>
             <key>name</key>
             <string>Beamed groups of notes</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>textBlackNoteShortStem</string>
               <string>textBlackNoteLongStem</string>
@@ -337,7 +337,7 @@
           <dict>
             <key>name</key>
             <string>Beams and slurs</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>controlBeginBeam</string>
               <string>controlEndBeam</string>
@@ -352,7 +352,7 @@
           <dict>
             <key>name</key>
             <string>Beaters pictograms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>pictBeaterSoftXylophoneUp</string>
               <string>pictBeaterSoftXylophoneDown</string>
@@ -487,7 +487,7 @@
           <dict>
             <key>name</key>
             <string>Bells pictograms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>pictSleighBell</string>
               <string>pictCowBell</string>
@@ -505,7 +505,7 @@
           <dict>
             <key>name</key>
             <string>Brass techniques</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>brassScoop</string>
               <string>brassLiftShort</string>
@@ -544,7 +544,7 @@
           <dict>
             <key>name</key>
             <string>Chimes pictograms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>pictTubularBells</string>
               <string>pictWindChimesGlass</string>
@@ -560,7 +560,7 @@
           <dict>
             <key>name</key>
             <string>Chord diagrams</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>fretboard3String</string>
               <string>fretboard3StringNut</string>
@@ -578,7 +578,7 @@
           <dict>
             <key>name</key>
             <string>Chord symbols</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>csymDiminished</string>
               <string>csymHalfDiminished</string>
@@ -598,7 +598,7 @@
           <dict>
             <key>name</key>
             <string>Clefs</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>gClef</string>
               <string>gClef15mb</string>
@@ -653,7 +653,7 @@
           <dict>
             <key>name</key>
             <string>Clefs supplement</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>indianDrumClef</string>
             </array>
@@ -661,7 +661,7 @@
           <dict>
             <key>name</key>
             <string>Combining staff positions</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>staffPosRaise1</string>
               <string>staffPosRaise2</string>
@@ -684,7 +684,7 @@
           <dict>
             <key>name</key>
             <string>Combining strokes for trills and mordents</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>ornamentTopLeftConcaveStroke</string>
               <string>ornamentTopLeftConvexStroke</string>
@@ -716,7 +716,7 @@
           <dict>
             <key>name</key>
             <string>Common ornaments</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>graceNoteAcciaccaturaStemUp</string>
               <string>graceNoteAcciaccaturaStemDown</string>
@@ -739,7 +739,7 @@
           <dict>
             <key>name</key>
             <string>Conductor symbols</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>conductorStrongBeat</string>
               <string>conductorLeftBeat</string>
@@ -757,7 +757,7 @@
           <dict>
             <key>name</key>
             <string>Cymbals pictograms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>pictCrashCymbals</string>
               <string>pictSuspendedCymbal</string>
@@ -775,7 +775,7 @@
           <dict>
             <key>name</key>
             <string>Daseian notation</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>daseianGraves1</string>
               <string>daseianGraves2</string>
@@ -800,7 +800,7 @@
           <dict>
             <key>name</key>
             <string>Drums pictograms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>pictTimpani</string>
               <string>pictSnareDrum</string>
@@ -828,7 +828,7 @@
           <dict>
             <key>name</key>
             <string>Dynamics</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>dynamicPiano</string>
               <string>dynamicMezzo</string>
@@ -877,7 +877,7 @@
           <dict>
             <key>name</key>
             <string>Electronic music pictograms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>elecMicrophone</string>
               <string>elecHeadphones</string>
@@ -949,7 +949,7 @@
           <dict>
             <key>name</key>
             <string>Extended Helmholtz-Ellis accidentals (just intonation)</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accidentalDoubleFlatOneArrowDown</string>
               <string>accidentalFlatOneArrowDown</string>
@@ -1016,7 +1016,7 @@
           <dict>
             <key>name</key>
             <string>Extended Stein-Zimmermann accidentals</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accidentalReversedFlatArrowUp</string>
               <string>accidentalReversedFlatArrowDown</string>
@@ -1036,7 +1036,7 @@
           <dict>
             <key>name</key>
             <string>Figured bass</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>figbass0</string>
               <string>figbass1</string>
@@ -1075,7 +1075,7 @@
           <dict>
             <key>name</key>
             <string>Figured bass supplement</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>figbass7Diminished</string>
             </array>
@@ -1083,7 +1083,7 @@
           <dict>
             <key>name</key>
             <string>Fingering</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>fingering0</string>
               <string>fingering1</string>
@@ -1121,7 +1121,7 @@
           <dict>
             <key>name</key>
             <string>Fingering supplement</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>fingering0Italic</string>
               <string>fingering1Italic</string>
@@ -1142,7 +1142,7 @@
           <dict>
             <key>name</key>
             <string>Flags</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>flag8thUp</string>
               <string>flag8thDown</string>
@@ -1167,7 +1167,7 @@
           <dict>
             <key>name</key>
             <string>French and English Renaissance lute tablature</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>luteFrenchFretA</string>
               <string>luteFrenchFretB</string>
@@ -1196,7 +1196,7 @@
           <dict>
             <key>name</key>
             <string>Function theory symbols</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>functionZero</string>
               <string>functionOne</string>
@@ -1251,7 +1251,7 @@
           <dict>
             <key>name</key>
             <string>Function theory symbols supplement</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>functionMUpper</string>
               <string>functionMLower</string>
@@ -1262,7 +1262,7 @@
           <dict>
             <key>name</key>
             <string>German Renaissance lute tablature</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>luteGermanALower</string>
               <string>luteGermanBLower</string>
@@ -1305,7 +1305,7 @@
           <dict>
             <key>name</key>
             <string>Gongs pictograms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>pictTamTam</string>
               <string>pictTamTamWithBeater</string>
@@ -1317,7 +1317,7 @@
           <dict>
             <key>name</key>
             <string>Gould arrow quartertone accidentals (24-EDO)</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accidentalQuarterToneFlatArrowUp</string>
               <string>accidentalThreeQuarterTonesFlatArrowDown</string>
@@ -1336,7 +1336,7 @@
           <dict>
             <key>name</key>
             <string>Guitar</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>guitarVibratoBarScoop</string>
               <string>guitarVibratoBarDip</string>
@@ -1369,7 +1369,7 @@
           <dict>
             <key>name</key>
             <string>Handbells</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>handbellsMartellato</string>
               <string>handbellsMartellatoLift</string>
@@ -1394,7 +1394,7 @@
           <dict>
             <key>name</key>
             <string>Harp techniques</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>harpPedalRaised</string>
               <string>harpPedalCentered</string>
@@ -1431,7 +1431,7 @@
           <dict>
             <key>name</key>
             <string>Herculean Sagittal extension (very high precision) accidental diacritics</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accSagittalShaftUp</string>
               <string>accSagittalShaftDown</string>
@@ -1442,7 +1442,7 @@
           <dict>
             <key>name</key>
             <string>Holds and pauses</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>fermataAbove</string>
               <string>fermataBelow</string>
@@ -1472,7 +1472,7 @@
           <dict>
             <key>name</key>
             <string>Individual notes</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>noteDoubleWhole</string>
               <string>noteDoubleWholeSquare</string>
@@ -1503,7 +1503,7 @@
           <dict>
             <key>name</key>
             <string>Italian and Spanish Renaissance lute tablature</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>luteItalianFret0</string>
               <string>luteItalianFret1</string>
@@ -1533,7 +1533,7 @@
           <dict>
             <key>name</key>
             <string>Johnston accidentals (just intonation)</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accidentalJohnstonPlus</string>
               <string>accidentalJohnstonMinus</string>
@@ -1548,7 +1548,7 @@
           <dict>
             <key>name</key>
             <string>Kahnotation</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>kahnStep</string>
               <string>kahnTap</string>
@@ -1637,7 +1637,7 @@
           <dict>
             <key>name</key>
             <string>Keyboard techniques</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>keyboardPedalPed</string>
               <string>keyboardPedalP</string>
@@ -1684,7 +1684,7 @@
           <dict>
             <key>name</key>
             <string>Kievan square notation</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>kievanCClef</string>
               <string>kievanEndingSymbol</string>
@@ -1706,7 +1706,7 @@
           <dict>
             <key>name</key>
             <string>Kodály hand signs</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>kodalyHandDo</string>
               <string>kodalyHandRe</string>
@@ -1720,7 +1720,7 @@
           <dict>
             <key>name</key>
             <string>Lyrics</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>lyricsElisionNarrow</string>
               <string>lyricsElision</string>
@@ -1733,13 +1733,13 @@
           <dict>
             <key>name</key>
             <string>Magrathean Sagittal extension (insane precision) accidental diacritics</string>
-            <key>coverage</key>
+            <key>list</key>
             <array/>
           </dict>
           <dict>
             <key>name</key>
             <string>Medieval and Renaissance accidentals</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>medRenFlatSoftB</string>
               <string>medRenFlatHardB</string>
@@ -1752,7 +1752,7 @@
           <dict>
             <key>name</key>
             <string>Medieval and Renaissance clefs</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>mensuralGclef</string>
               <string>mensuralGclefPetrucci</string>
@@ -1771,7 +1771,7 @@
           <dict>
             <key>name</key>
             <string>Medieval and Renaissance individual notes</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>mensuralBlackMaxima</string>
               <string>mensuralBlackLonga</string>
@@ -1796,7 +1796,7 @@
           <dict>
             <key>name</key>
             <string>Medieval and Renaissance miscellany</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>mensuralSignumUp</string>
               <string>mensuralSignumDown</string>
@@ -1820,7 +1820,7 @@
           <dict>
             <key>name</key>
             <string>Medieval and Renaissance noteheads and stems</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>mensuralNoteheadMaximaBlack</string>
               <string>mensuralNoteheadMaximaVoid</string>
@@ -1856,7 +1856,7 @@
           <dict>
             <key>name</key>
             <string>Medieval and Renaissance oblique forms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>mensuralObliqueAsc2ndBlack</string>
               <string>mensuralObliqueAsc2ndVoid</string>
@@ -1895,7 +1895,7 @@
           <dict>
             <key>name</key>
             <string>Medieval and Renaissance plainchant articulations</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>chantIctusAbove</string>
               <string>chantIctusBelow</string>
@@ -1912,7 +1912,7 @@
           <dict>
             <key>name</key>
             <string>Medieval and Renaissance plainchant multiple-note forms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>chantPodatusLower</string>
               <string>chantPodatusUpper</string>
@@ -1941,7 +1941,7 @@
           <dict>
             <key>name</key>
             <string>Medieval and Renaissance plainchant single-note forms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>chantPunctum</string>
               <string>chantPunctumInclinatum</string>
@@ -1966,7 +1966,7 @@
           <dict>
             <key>name</key>
             <string>Medieval and Renaissance prolations</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>mensuralProlation1</string>
               <string>mensuralProlation2</string>
@@ -2005,7 +2005,7 @@
           <dict>
             <key>name</key>
             <string>Medieval and Renaissance rests</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>mensuralRestMaxima</string>
               <string>mensuralRestLongaPerfecta</string>
@@ -2021,7 +2021,7 @@
           <dict>
             <key>name</key>
             <string>Medieval and Renaissance staves</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>chantStaff</string>
               <string>chantStaffWide</string>
@@ -2037,7 +2037,7 @@
           <dict>
             <key>name</key>
             <string>Medieval and Renaissance symbols in CMN</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>ornamentQuilisma</string>
               <string>ornamentOriscus</string>
@@ -2055,7 +2055,7 @@
           <dict>
             <key>name</key>
             <string>Metallic struck percussion pictograms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>pictTriangle</string>
               <string>pictAnvil</string>
@@ -2064,7 +2064,7 @@
           <dict>
             <key>name</key>
             <string>Metronome marks</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>metNoteDoubleWhole</string>
               <string>metNoteDoubleWholeSquare</string>
@@ -2095,7 +2095,7 @@
           <dict>
             <key>name</key>
             <string>Miscellaneous percussion instrument pictograms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>pictPistolShot</string>
               <string>pictCannon</string>
@@ -2110,7 +2110,7 @@
           <dict>
             <key>name</key>
             <string>Miscellaneous symbols</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>miscDoNotPhotocopy</string>
               <string>miscDoNotCopy</string>
@@ -2122,7 +2122,7 @@
           <dict>
             <key>name</key>
             <string>Multi-segment lines</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>wiggleTrillFastest</string>
               <string>wiggleTrillFasterStill</string>
@@ -2229,7 +2229,7 @@
           <dict>
             <key>name</key>
             <string>Note clusters</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>noteheadClusterSquareWhite</string>
               <string>noteheadClusterSquareBlack</string>
@@ -2276,7 +2276,7 @@
           <dict>
             <key>name</key>
             <string>Note name noteheads</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>noteDoWhole</string>
               <string>noteReWhole</string>
@@ -2379,7 +2379,7 @@
           <dict>
             <key>name</key>
             <string>Noteheads</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>noteheadDoubleWhole</string>
               <string>noteheadDoubleWholeSquare</string>
@@ -2479,7 +2479,7 @@
           <dict>
             <key>name</key>
             <string>Octaves</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>ottava</string>
               <string>ottavaAlta</string>
@@ -2502,7 +2502,7 @@
           <dict>
             <key>name</key>
             <string>Octaves supplement</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>octaveLoco</string>
               <string>octaveBaselineA</string>
@@ -2518,13 +2518,13 @@
           <dict>
             <key>name</key>
             <string>Olympian Sagittal extension (extreme precision) accidental diacritics</string>
-            <key>coverage</key>
+            <key>list</key>
             <array/>
           </dict>
           <dict>
             <key>name</key>
             <string>German organ tablature</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>organGermanCUpper</string>
               <string>organGermanCisUpper</string>
@@ -2595,7 +2595,7 @@
           <dict>
             <key>name</key>
             <string>Other accidentals</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accidentalXenakisOneThirdToneSharp</string>
               <string>accidentalXenakisTwoThirdTonesSharp</string>
@@ -2634,7 +2634,7 @@
           <dict>
             <key>name</key>
             <string>Other baroque ornaments</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>ornamentPortDeVoixV</string>
               <string>ornamentRightFacingHalfCircle</string>
@@ -2667,7 +2667,7 @@
           <dict>
             <key>name</key>
             <string>Percussion playing technique pictograms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>pictStickShot</string>
               <string>pictScrapeCenterToEdge</string>
@@ -2705,7 +2705,7 @@
           <dict>
             <key>name</key>
             <string>Persian accidentals</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accidentalKoron</string>
               <string>accidentalSori</string>
@@ -2714,7 +2714,7 @@
           <dict>
             <key>name</key>
             <string>Plucked techniques</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>pluckedSnapPizzicatoBelow</string>
               <string>pluckedSnapPizzicatoAbove</string>
@@ -2733,7 +2733,7 @@
           <dict>
             <key>name</key>
             <string>Precomposed trills and mordents</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>ornamentPrecompSlide</string>
               <string>ornamentPrecompDescendingSlide</string>
@@ -2765,7 +2765,7 @@
           <dict>
             <key>name</key>
             <string>Promethean Sagittal extension (high precision) multi-shaft accidentals</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accSagittalSharp23SDown</string>
               <string>accSagittalFlat23SUp</string>
@@ -2836,7 +2836,7 @@
           <dict>
             <key>name</key>
             <string>Promethean Sagittal extension (high precision) single-shaft accidentals</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accSagittal19SchismaUp</string>
               <string>accSagittal19SchismaDown</string>
@@ -2873,7 +2873,7 @@
           <dict>
             <key>name</key>
             <string>Renaissance lute tablature</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>luteStaff6Lines</string>
               <string>luteStaff6LinesWide</string>
@@ -2897,7 +2897,7 @@
           <dict>
             <key>name</key>
             <string>Repeats</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>repeatLeft</string>
               <string>repeatRight</string>
@@ -2918,7 +2918,7 @@
           <dict>
             <key>name</key>
             <string>Rests</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>restMaxima</string>
               <string>restLonga</string>
@@ -2948,7 +2948,7 @@
           <dict>
             <key>name</key>
             <string>Round and square noteheads</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>noteheadRoundBlackLarge</string>
               <string>noteheadRoundWhiteLarge</string>
@@ -2969,7 +2969,7 @@
           <dict>
             <key>name</key>
             <string>Shakers or rattles pictograms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>pictFlexatone</string>
               <string>pictMaraca</string>
@@ -2985,7 +2985,7 @@
           <dict>
             <key>name</key>
             <string>Shape note noteheads</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>noteShapeRoundWhite</string>
               <string>noteShapeRoundBlack</string>
@@ -3020,7 +3020,7 @@
           <dict>
             <key>name</key>
             <string>Shape note noteheads supplement</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>noteShapeRoundDoubleWhole</string>
               <string>noteShapeSquareDoubleWhole</string>
@@ -3041,7 +3041,7 @@
           <dict>
             <key>name</key>
             <string>Simplified Music Notation</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>smnSharp</string>
               <string>smnSharpWhite</string>
@@ -3059,7 +3059,7 @@
           <dict>
             <key>name</key>
             <string>Sims accidentals (72-EDO)</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accidentalSims12Down</string>
               <string>accidentalSims6Down</string>
@@ -3072,7 +3072,7 @@
           <dict>
             <key>name</key>
             <string>Slash noteheads</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>noteheadSlashVerticalEnds</string>
               <string>noteheadSlashHorizontalEnds</string>
@@ -3090,7 +3090,7 @@
           <dict>
             <key>name</key>
             <string>Spartan Sagittal multi-shaft accidentals</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accSagittalSharp25SDown</string>
               <string>accSagittalFlat25SUp</string>
@@ -3135,7 +3135,7 @@
           <dict>
             <key>name</key>
             <string>Spartan Sagittal single-shaft accidentals</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accSagittal5v7KleismaUp</string>
               <string>accSagittal5v7KleismaDown</string>
@@ -3158,7 +3158,7 @@
           <dict>
             <key>name</key>
             <string>Staff brackets and dividers</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>brace</string>
               <string>reversedBrace</string>
@@ -3179,7 +3179,7 @@
           <dict>
             <key>name</key>
             <string>Standard accidentals (12-EDO)</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accidentalFlat</string>
               <string>accidentalNatural</string>
@@ -3200,7 +3200,7 @@
           <dict>
             <key>name</key>
             <string>Standard accidentals for chord symbols</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>csymAccidentalFlat</string>
               <string>csymAccidentalNatural</string>
@@ -3214,7 +3214,7 @@
           <dict>
             <key>name</key>
             <string>Staves</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>staff1Line</string>
               <string>staff2Lines</string>
@@ -3242,7 +3242,7 @@
           <dict>
             <key>name</key>
             <string>Stein-Zimmermann accidentals (24-EDO)</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accidentalQuarterToneFlatStein</string>
               <string>accidentalThreeQuarterTonesFlatZimmermann</string>
@@ -3255,7 +3255,7 @@
           <dict>
             <key>name</key>
             <string>Stems</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>stem</string>
               <string>stemSprechgesang</string>
@@ -3278,7 +3278,7 @@
           <dict>
             <key>name</key>
             <string>Stockhausen accidentals (24-EDO)</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accidentalRaisedStockhausen</string>
               <string>accidentalLoweredStockhausen</string>
@@ -3300,7 +3300,7 @@
           <dict>
             <key>name</key>
             <string>String techniques</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>stringsDownBow</string>
               <string>stringsDownBowTurned</string>
@@ -3334,7 +3334,7 @@
           <dict>
             <key>name</key>
             <string>Time signatures</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>timeSig0</string>
               <string>timeSig1</string>
@@ -3373,7 +3373,7 @@
           <dict>
             <key>name</key>
             <string>Reversed time signatures</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>timeSig0Reversed</string>
               <string>timeSig1Reversed</string>
@@ -3392,7 +3392,7 @@
           <dict>
             <key>name</key>
             <string>Time signatures supplement</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>timeSigBracketLeft</string>
               <string>timeSigBracketRight</string>
@@ -3406,7 +3406,7 @@
           <dict>
             <key>name</key>
             <string>Turned time signatures</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>timeSig0Turned</string>
               <string>timeSig1Turned</string>
@@ -3425,7 +3425,7 @@
           <dict>
             <key>name</key>
             <string>Tremolos</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>tremolo1</string>
               <string>tremolo2</string>
@@ -3453,7 +3453,7 @@
           <dict>
             <key>name</key>
             <string>Trojan Sagittal extension (12-EDO relative) accidentals</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accSagittal23CommaUp</string>
               <string>accSagittal23CommaDown</string>
@@ -3484,7 +3484,7 @@
           <dict>
             <key>name</key>
             <string>Tuned mallet percussion pictograms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>pictGlsp</string>
               <string>pictXyl</string>
@@ -3510,7 +3510,7 @@
           <dict>
             <key>name</key>
             <string>Tuplets</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>tuplet0</string>
               <string>tuplet1</string>
@@ -3528,7 +3528,7 @@
           <dict>
             <key>name</key>
             <string>Turkish folk music accidentals</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accidental1CommaSharp</string>
               <string>accidental2CommaSharp</string>
@@ -3543,7 +3543,7 @@
           <dict>
             <key>name</key>
             <string>Vocal techniques</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>vocalMouthClosed</string>
               <string>vocalMouthSlightlyOpen</string>
@@ -3562,7 +3562,7 @@
           <dict>
             <key>name</key>
             <string>Whistles and aerophones pictograms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>pictSlideWhistle</string>
               <string>pictBirdWhistle</string>
@@ -3580,7 +3580,7 @@
           <dict>
             <key>name</key>
             <string>Wind techniques</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>doubleTongueAbove</string>
               <string>doubleTongueBelow</string>
@@ -3615,7 +3615,7 @@
           <dict>
             <key>name</key>
             <string>Wooden struck or scraped percussion pictograms</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>pictWoodBlock</string>
               <string>pictTempleBlocks</string>
@@ -3635,7 +3635,7 @@
           <dict>
             <key>name</key>
             <string>Wyschnegradsky accidentals (72-EDO)</string>
-            <key>coverage</key>
+            <key>list</key>
             <array>
               <string>accidentalWyschnegradsky1TwelfthsSharp</string>
               <string>accidentalWyschnegradsky2TwelfthsSharp</string>

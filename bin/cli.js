@@ -67,8 +67,8 @@ async function install ({ force = false } = {}) {
   if (force) warn('Installing with --force flag. Any checks for conflicts will be skipped.')
 
   const FILES = [
-    '../dist/GlyphData.xml',
-    '../dist/Groups.plist'
+    '../dist/GlyphData-smufl.xml',
+    '../dist/Groups-smufl.plist'
   ].map(path => PATH.join(__dirname, path))
 
   const DEST = PATH.join(
@@ -218,7 +218,7 @@ PROGRAM
 
   The Glyphs font creation software allows for the expansion of its standard
   glyph database and custom categorisation in its left sidebar by providing
-  custom GlyphData.xml and Groups.plist files.
+  custom GlyphData-smufl.xml and Groups-smufl.plist files.
 
   This package provides files to help develop fonts using the SMuFL (Standard
   Music Font Layout) specification.
