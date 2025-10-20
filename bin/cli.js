@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { parseArgs, styleText } from 'node:util';
 
 // required libraries
-import { cancel, confirm, group, intro, isCancel, log } from '@clack/prompts';
+import { cancel, confirm, intro, isCancel, log } from '@clack/prompts';
 
 /*
 ███████ ██    ██ ███    ██  ██████ ████████ ██  ██████  ███    ██
@@ -51,6 +51,7 @@ async function startPrompt() {
 	intro('Welcome to the SMuFL Glyphs Info Installer');
 	let shouldInstall = await confirm({
 		message: 'This script will set up SMuFL support in Glyphs. Do you want to continue?',
+		initialValue: false,
 	});
 	if (isCancel(shouldInstall) || !shouldInstall) {
 		cancel('Installation cancelled.');
@@ -181,25 +182,19 @@ async function resolveConflicts(conflicts, dest) {
 		log.info(`Skipped copying ${fname} as it is already installed`);
 	});
 
-	let prompts = clashing.map((conflict) => {
+	for (const conflict of clashing) {
 		let fname = nodePath.basename(conflict.file);
-		return /** @type const */ ([
-			conflict.file,
-			() =>
-				confirm({
-					message: `A different ${fname} was found. Are you sure you want to overwrite it?`,
-				}),
-		]);
-	});
-
-	let answers = await group(Object.fromEntries(prompts));
-
-	for (var answer in answers) {
-		if (answers[answer]) {
-			await copyResources([answer], dest);
-		} else {
-			let fname = nodePath.basename(answer);
+		const shouldOverwrite = await confirm({
+			message: `A different ${styleText(['bold'], fname)} was found. Do you want to overwrite it?`,
+			initialValue: false,
+		});
+		if (isCancel(shouldOverwrite)) {
+			cancel('Installation cancelled.');
+			process.exit(0);
+		} else if (!shouldOverwrite) {
 			log.warn(`Did not copy ${fname}. It was not installed.`);
+		} else {
+			await copyResources([conflict.file], dest);
 		}
 	}
 }
