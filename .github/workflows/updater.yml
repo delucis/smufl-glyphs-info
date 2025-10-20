@@ -30,7 +30,11 @@ jobs:
         if: steps.check_changes.outputs.changes == 'true'
         run: |
           touch .changeset/update-build-artifacts.md
-          echo "---\n'smufl-glyphs-info': patch\n---\n\nUpdates data with latest changes from https://github.com/w3c/smufl.\n" > .changeset/update-build-artifacts.md
+          echo "---
+          'smufl-glyphs-info': patch
+          ---
+          Updates data with latest changes from https://github.com/w3c/smufl.
+          " > .changeset/update-build-artifacts.md
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
