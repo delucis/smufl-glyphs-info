@@ -33,6 +33,7 @@ jobs:
           echo "---
           'smufl-glyphs-info': patch
           ---
+
           Updates data with latest changes from https://github.com/w3c/smufl.
           " > .changeset/update-build-artifacts.md
 
