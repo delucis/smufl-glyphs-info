@@ -11,10 +11,9 @@ It also includes a command line interface to help speed up installation of these
 
 ## Installation
 
-To use the command line interface you will need to install this package using the Node Package Manager (NPM):
-
+To install the support files using the command line interface run the following in your terminal:
 ```sh
-npm install -g smufl-glyphs-info
+npx smufl-glyphs-info
 ```
 
 <details>
@@ -28,35 +27,22 @@ npm install -g smufl-glyphs-info
 > brew install node
 > ```
 >
-> Installing Node also installs the Node Package Manager, which is more commonly known as “NPM”. Here’s how the NPM installation command above breaks down:
+> Installing Node also installs the Node Package Manager, which is more commonly known as “NPM” and provides the `npx` command for executing third-party packages. Here’s how the command above breaks down:
 >
-> 1. `npm` tells your terminal to start running the Node Package Manager.
+> 1. `npx` tells your terminal to execute a package without installing it globally.
 >
-> 2. `install` tells NPM that you want to install a package.
->
-> 3. `-g` tells NPM that you want to install the package **g**lobally, rather than only for a local project.
->
-> 4. `smufl-glyphs-info` tells NPM the name of the package you want to install.
+> 2. `smufl-glyphs-info` tells `npx` the name of the package you want to execute.
 
   [ec50e337]: https://nodejs.org/en/download/package-manager/#macos "Installing Node.js via package manager"
 
 </details>
-
-
-## Usage
-
-To install the support files using the command line interface run the following in your terminal:
-
-```sh
-smufl-glyphs
-```
 
 Follow the on-screen prompts to complete the installation. If you have existing `GlyphData-smufl.xml` or `Groups-smufl.plist` files, you will be asked if you want to overwrite them.
 
 More information on how to use the `smufl-glyphs` command can be found by running:
 
 ```sh
-smufl-glyphs --help
+npx smufl-glyphs-info --help
 ```
 
 
@@ -87,7 +73,7 @@ An example of the Glyphs left sidebar with the files installed
 
 Running the `smufl-glyphs` command in your terminal will copy these support files to Glyphs’ `Application Support` directory for you, but this can also be done manually if you prefer to avoid Node, the Terminal, and other scary things.
 
-You can find Glyphs’ `Application Support` directory at: `/Users/YOUR-USER-NAME/Library/Application Support/Glyphs`.
+You can find Glyphs’ `Application Support` directory at: `/Users/YOUR-USER-NAME/Library/Application Support/Glyphs 3`.
 
 One quick way to find this is to open Glyphs and select **Script** > **Open Scripts Folder**.
 
@@ -97,7 +83,7 @@ You should end up with a directory structure like this:
 
     ~/Library
     └── Application Support
-        └── Glyphs
+        └── Glyphs 3
             ├── Info
             │   ├── GlyphData-smufl.xml
             │   └── Groups-smufl.plist

@@ -7,7 +7,7 @@
     "darwin"
   ],
   "bin": {
-    "smufl-glyphs": "./bin/cli.js"
+    "smufl-glyphs-info": "./bin/cli.js"
   },
   "files": [
     "bin/*",
