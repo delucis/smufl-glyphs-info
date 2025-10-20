@@ -1,5 +1,11 @@
 # smufl-glyphs-info
 
+## 0.6.1
+
+### Patch Changes
+
+- [#13](https://github.com/delucis/smufl-glyphs-info/pull/13) [`0a6f712`](https://github.com/delucis/smufl-glyphs-info/commit/0a6f712eaa087110286f2d0926cad24a66f44f07) Thanks [@github-actions](https://github.com/apps/github-actions)! - Updates data with latest changes from https://github.com/w3c/smufl.
+
 ## 0.6.0
 
 ### Minor Changes
