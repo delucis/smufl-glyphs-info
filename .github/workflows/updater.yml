@@ -45,3 +45,4 @@ jobs:
           delete-branch: true
           add-paths: |
             dist/
+            .changeset/
