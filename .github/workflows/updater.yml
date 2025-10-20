@@ -16,6 +16,22 @@ jobs:
           node-version: 24
       - run: npm ci
       - run: npm run build
+
+      - name: Check for changes in dist/
+        id: check_changes
+        run: |
+          if git diff --quiet dist/; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create changeset if dist/ changed
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          touch .changeset/update-build-artifacts.md
+          echo "---\n'smufl-glyphs-info': patch\n---\n\nUpdates data with latest changes from https://github.com/w3c/smufl.\n" > .changeset/update-build-artifacts.md
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
