@@ -23,8 +23,14 @@ import { cancel, confirm, intro, isCancel, log } from '@clack/prompts';
 ██████  ███████ ██      ██ ██   ████ ██    ██    ██  ██████  ██   ████ ███████
 */
 
+/**
+ * Style text in bold for terminal output.
+ * @param {string} string
+ */
+const bold = (string) => styleText(['bold'], string);
+
 const helpMessage = `
-Usage: ${styleText(['bold'], 'npx smufl-glyphs-info')} ${styleText(['dim'], '[options]')}
+Usage: ${bold('npx smufl-glyphs-info')} ${styleText(['dim'], '[options]')}
 
 Options:
   -f, --force      install SMuFl support without user input, overwriting any existing files
@@ -177,24 +183,24 @@ async function resolveConflicts(conflicts, dest) {
 		})
 	);
 
-	skippable.forEach((conflict) => {
-		let fname = nodePath.basename(conflict.file);
-		log.info(`Skipped copying ${fname} as it is already installed`);
-	});
+	for (const { file } of skippable) {
+		let fname = nodePath.basename(file);
+		log.info(`Skipped copying ${bold(fname)} as it is already installed`);
+	}
 
-	for (const conflict of clashing) {
-		let fname = nodePath.basename(conflict.file);
+	for (const { file } of clashing) {
+		let fname = nodePath.basename(file);
 		const shouldOverwrite = await confirm({
-			message: `A different ${styleText(['bold'], fname)} was found. Do you want to overwrite it?`,
+			message: `A different ${bold(fname)} was found. Do you want to overwrite it?`,
 			initialValue: false,
 		});
 		if (isCancel(shouldOverwrite)) {
 			cancel('Installation cancelled.');
 			process.exit(0);
 		} else if (!shouldOverwrite) {
-			log.warn(`Did not copy ${fname}. It was not installed.`);
+			log.warn(`Did not copy ${bold(fname)}. It was not installed.`);
 		} else {
-			await copyResources([conflict.file], dest);
+			await copyResources([file], dest);
 		}
 	}
 }
