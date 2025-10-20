@@ -4,10 +4,11 @@
 import fs from 'node:fs/promises';
 import nodePath from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseArgs, styleText } from 'node:util';
+import { parseArgs } from 'node:util';
 
 // required libraries
 import { cancel, confirm, intro, isCancel, log } from '@clack/prompts';
+import fmt from 'femtocolors';
 
 /*
 ███████ ██    ██ ███    ██  ██████ ████████ ██  ██████  ███    ██
@@ -23,14 +24,8 @@ import { cancel, confirm, intro, isCancel, log } from '@clack/prompts';
 ██████  ███████ ██      ██ ██   ████ ██    ██    ██  ██████  ██   ████ ███████
 */
 
-/**
- * Style text in bold for terminal output.
- * @param {string} string
- */
-const bold = (string) => styleText(['bold'], string);
-
 const helpMessage = `
-Usage: ${bold('npx smufl-glyphs-info')} ${styleText(['dim'], '[options]')}
+Usage: ${fmt.bold('npx smufl-glyphs-info')} ${fmt.dim('[options]')}
 
 Options:
   -f, --force      install SMuFl support without user input, overwriting any existing files
@@ -185,20 +180,20 @@ async function resolveConflicts(conflicts, dest) {
 
 	for (const { file } of skippable) {
 		let fname = nodePath.basename(file);
-		log.info(`Skipped copying ${bold(fname)} as it is already installed`);
+		log.info(`Skipped copying ${fmt.bold(fname)} as it is already installed`);
 	}
 
 	for (const { file } of clashing) {
 		let fname = nodePath.basename(file);
 		const shouldOverwrite = await confirm({
-			message: `A different ${bold(fname)} was found. Do you want to overwrite it?`,
+			message: `A different ${fmt.bold(fname)} was found. Do you want to overwrite it?`,
 			initialValue: false,
 		});
 		if (isCancel(shouldOverwrite)) {
 			cancel('Installation cancelled.');
 			process.exit(0);
 		} else if (!shouldOverwrite) {
-			log.warn(`Did not copy ${bold(fname)}. It was not installed.`);
+			log.warn(`Did not copy ${fmt.bold(fname)}. It was not installed.`);
 		} else {
 			await copyResources([file], dest);
 		}
@@ -220,7 +215,7 @@ async function resolveConflicts(conflicts, dest) {
 */
 
 if (process.platform !== 'darwin') {
-	const repoLink = styleText(['underline'], 'https://github.com/delucis/smufl-glyphs-info');
+	const repoLink = fmt.underline('https://github.com/delucis/smufl-glyphs-info');
 	cancel(
 		'This script is designed for use on macOS only.\n' +
 			'Running on macOS and seeing this error?\n' +
