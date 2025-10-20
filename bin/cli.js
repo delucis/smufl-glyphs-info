@@ -2,7 +2,7 @@
 
 // core Node imports
 import fs from 'node:fs/promises'
-import PATH from 'node:path'
+import nodePath from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { parseArgs, styleText } from 'node:util'
 
@@ -71,14 +71,14 @@ async function install ({ force = false } = {}) {
   const FILES = [
     '../dist/GlyphData-smufl.xml',
     '../dist/Groups-smufl.plist'
-  ].map(path => PATH.join(__dirname, path))
+  ].map(path => nodePath.join(__dirname, path))
 
   if (!process.env.HOME) {
     cancel('Could not determine home directory. Please open an issue: https://github.com/delucis/smufl-glyphs-info')
     process.exit(1)
   }
 
-  const DEST = PATH.join(
+  const DEST = nodePath.join(
     process.env.HOME,
     'Library/Application Support/Glyphs 3/Info'
   )
@@ -111,8 +111,8 @@ async function copyResources (files = [], dest = '', overwrite = true) {
   const flag = overwrite ? undefined : fs.constants.COPYFILE_EXCL
 
   await Promise.all(files.map(async file => {
-    let fname = PATH.basename(file)
-    return fs.copyFile(file, PATH.join(dest, fname), flag)
+    let fname = nodePath.basename(file)
+    return fs.copyFile(file, nodePath.join(dest, fname), flag)
       .then(() => log.success(`Copied ${fname} to ${dest}`))
   }))
 }
@@ -132,8 +132,8 @@ async function copySafely (files = [], dest = '') {
     /** @type { { file: string, xml?: string } } */
     let data = { file }
     let exists = true
-    let fname = PATH.basename(file)
-    let xml = await fs.readFile(PATH.join(dest, fname), 'utf8')
+    let fname = nodePath.basename(file)
+    let xml = await fs.readFile(nodePath.join(dest, fname), 'utf8')
       .catch((err) => {
         if (err.code !== 'ENOENT') throw err
         exists = false
@@ -172,12 +172,12 @@ async function resolveConflicts (conflicts, dest) {
   }))
 
   skippable.forEach(conflict => {
-    let fname = PATH.basename(conflict.file)
+    let fname = nodePath.basename(conflict.file)
     log.info(`Skipped copying ${fname} as it is already installed`)
   })
 
   let prompts = clashing.map(conflict => {
-    let fname = PATH.basename(conflict.file)
+    let fname = nodePath.basename(conflict.file)
     return /** @type const */ ([
       conflict.file,
       () => confirm({
@@ -192,7 +192,7 @@ async function resolveConflicts (conflicts, dest) {
     if (answers[answer]) {
       await copyResources([ answer ], dest)
     } else {
-      let fname = PATH.basename(answer)
+      let fname = nodePath.basename(answer)
       log.warn(`Did not copy ${fname}. It was not installed.`)
     }
   }
