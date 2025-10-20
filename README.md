@@ -65,7 +65,7 @@ This package provides:
 If you would like to access these files directly, you will find them in [the `dist` directory](dist).
 
 <p align=center>
-<img alt="Screenshot of the left sidebar in Glyphs with SMuFL support files installed" src="https://github.com/delucis/smufl-glyphs-info/raw/main/.github/sidebar-screenshot.png" /><br><br>
+<img alt="Screenshot of the left sidebar in Glyphs with SMuFL support files installed" src="https://github.com/delucis/smufl-glyphs-info/blob/main/.github/sidebar-screenshot.png?raw=true" width="513" height="382" /><br><br>
 An example of the Glyphs left sidebar with the files installed
 </p>
 
