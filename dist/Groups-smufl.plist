@@ -332,6 +332,13 @@
               <string>textTupletBracketStartLongStem</string>
               <string>textTuplet3LongStem</string>
               <string>textTupletBracketEndLongStem</string>
+              <string>textHeadlessBlackNoteShortStem</string>
+              <string>textHeadlessBlackNoteLongStem</string>
+              <string>textHeadlessBlackNoteFrac8thShortStem</string>
+              <string>textHeadlessBlackNoteFrac8thLongStem</string>
+              <string>textHeadlessBlackNoteFrac16thShortStem</string>
+              <string>textHeadlessBlackNoteFrac16thLongStem</string>
+              <string>textHeadlessBlackNoteFrac32ndLongStem</string>
             </array>
           </dict>
           <dict>
@@ -555,6 +562,25 @@
               <string>pictGlassPlateChimes</string>
               <string>pictMetalTubeChimes</string>
               <string>pictMetalPlateChimes</string>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>Chop (percussive bowing) notation</string>
+            <key>list</key>
+            <array>
+              <string>stringsDownBowTowardsBody</string>
+              <string>stringsUpBowTowardsBody</string>
+              <string>stringsDownBowAwayFromBody</string>
+              <string>stringsUpBowAwayFromBody</string>
+              <string>stringsDownBowBeyondBridge</string>
+              <string>stringsUpBowBeyondBridge</string>
+              <string>stringsScrapeParallelInward</string>
+              <string>stringsScrapeParallelOutward</string>
+              <string>stringsScrapeCircularClockwise</string>
+              <string>stringsScrapeCircularCounterclockwise</string>
+              <string>stringsTripleChopInward</string>
+              <string>stringsTripleChopOutward</string>
             </array>
           </dict>
           <dict>
@@ -1015,6 +1041,23 @@
           </dict>
           <dict>
             <key>name</key>
+            <string>Extended Helmholtz-Ellis accidentals (just intonation) supplement</string>
+            <key>list</key>
+            <array>
+              <string>accidentalCombiningLower29LimitComma</string>
+              <string>accidentalCombiningRaise29LimitComma</string>
+              <string>accidentalCombiningLower37Quartertone</string>
+              <string>accidentalCombiningRaise37Quartertone</string>
+              <string>accidentalCombiningLower41Comma</string>
+              <string>accidentalCombiningRaise41Comma</string>
+              <string>accidentalCombiningLower43Comma</string>
+              <string>accidentalCombiningRaise43Comma</string>
+              <string>accidentalCombiningLower47Quartertone</string>
+              <string>accidentalCombiningRaise47Quartertone</string>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
             <string>Extended Stein-Zimmermann accidentals</string>
             <key>list</key>
             <array>
@@ -1078,6 +1121,8 @@
             <key>list</key>
             <array>
               <string>figbass7Diminished</string>
+              <string>figbassTripleFlat</string>
+              <string>figbassTripleSharp</string>
             </array>
           </dict>
           <dict>
@@ -1137,6 +1182,8 @@
               <string>fingeringRightParenthesisItalic</string>
               <string>fingeringLeftBracketItalic</string>
               <string>fingeringRightBracketItalic</string>
+              <string>fingeringQLower</string>
+              <string>fingeringSLower</string>
             </array>
           </dict>
           <dict>
@@ -1364,6 +1411,10 @@
               <string>guitarStrumDown</string>
               <string>guitarBarreFull</string>
               <string>guitarBarreHalf</string>
+              <string>guitarString10</string>
+              <string>guitarString11</string>
+              <string>guitarString12</string>
+              <string>guitarString13</string>
             </array>
           </dict>
           <dict>
@@ -1467,6 +1518,7 @@
               <string>caesuraCurved</string>
               <string>breathMarkSalzedo</string>
               <string>curlewSign</string>
+              <string>caesuraSingleStroke</string>
             </array>
           </dict>
           <dict>
@@ -1734,7 +1786,28 @@
             <key>name</key>
             <string>Magrathean Sagittal extension (insane precision) accidental diacritics</string>
             <key>list</key>
-            <array/>
+            <array>
+              <string>accSagittal1TinaUp</string>
+              <string>accSagittal1TinaDown</string>
+              <string>accSagittal2TinasUp</string>
+              <string>accSagittal2TinasDown</string>
+              <string>accSagittal3TinasUp</string>
+              <string>accSagittal3TinasDown</string>
+              <string>accSagittal4TinasUp</string>
+              <string>accSagittal4TinasDown</string>
+              <string>accSagittal5TinasUp</string>
+              <string>accSagittal5TinasDown</string>
+              <string>accSagittal6TinasUp</string>
+              <string>accSagittal6TinasDown</string>
+              <string>accSagittal7TinasUp</string>
+              <string>accSagittal7TinasDown</string>
+              <string>accSagittal8TinasUp</string>
+              <string>accSagittal8TinasDown</string>
+              <string>accSagittal9TinasUp</string>
+              <string>accSagittal9TinasDown</string>
+              <string>accSagittalFractionalTinaUp</string>
+              <string>accSagittalFractionalTinaDown</string>
+            </array>
           </dict>
           <dict>
             <key>name</key>
@@ -1791,6 +1864,7 @@
               <string>mensuralWhiteMinima</string>
               <string>mensuralWhiteSemiminima</string>
               <string>mensuralWhiteFusa</string>
+              <string>mensuralWhiteSemibrevis</string>
             </array>
           </dict>
           <dict>
@@ -2000,6 +2074,18 @@
               <string>mensuralModusImperfectumVert</string>
               <string>mensuralTempusPerfectumHoriz</string>
               <string>mensuralTempusImperfectumHoriz</string>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>Medieval and Renaissance prolations supplement</string>
+            <key>list</key>
+            <array>
+              <string>mensuralProportion5</string>
+              <string>mensuralProportion6</string>
+              <string>mensuralProportion7</string>
+              <string>mensuralProportion8</string>
+              <string>mensuralProportion9</string>
             </array>
           </dict>
           <dict>
@@ -2378,6 +2464,40 @@
           </dict>
           <dict>
             <key>name</key>
+            <string>Note name noteheads supplement</string>
+            <key>list</key>
+            <array>
+              <string>noteDiWhole</string>
+              <string>noteRiWhole</string>
+              <string>noteRaWhole</string>
+              <string>noteMeWhole</string>
+              <string>noteFiWhole</string>
+              <string>noteSeWhole</string>
+              <string>noteLiWhole</string>
+              <string>noteLeWhole</string>
+              <string>noteTeWhole</string>
+              <string>noteDiHalf</string>
+              <string>noteRiHalf</string>
+              <string>noteRaHalf</string>
+              <string>noteMeHalf</string>
+              <string>noteFiHalf</string>
+              <string>noteSeHalf</string>
+              <string>noteLiHalf</string>
+              <string>noteLeHalf</string>
+              <string>noteTeHalf</string>
+              <string>noteDiBlack</string>
+              <string>noteRiBlack</string>
+              <string>noteRaBlack</string>
+              <string>noteMeBlack</string>
+              <string>noteFiBlack</string>
+              <string>noteSeBlack</string>
+              <string>noteLiBlack</string>
+              <string>noteLeBlack</string>
+              <string>noteTeBlack</string>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
             <string>Noteheads</string>
             <key>list</key>
             <array>
@@ -2478,6 +2598,35 @@
           </dict>
           <dict>
             <key>name</key>
+            <string>Noteheads supplement</string>
+            <key>list</key>
+            <array>
+              <string>noteheadNancarrowSine</string>
+              <string>noteheadCowellThirdNoteSeriesWhole</string>
+              <string>noteheadCowellThirdNoteSeriesHalf</string>
+              <string>noteheadCowellThirdNoteSeriesBlack</string>
+              <string>noteheadCowellFifthNoteSeriesWhole</string>
+              <string>noteheadCowellFifthNoteSeriesHalf</string>
+              <string>noteheadCowellFifthNoteSeriesBlack</string>
+              <string>noteheadCowellSeventhNoteSeriesWhole</string>
+              <string>noteheadCowellSeventhNoteSeriesHalf</string>
+              <string>noteheadCowellSeventhNoteSeriesBlack</string>
+              <string>noteheadCowellNinthNoteSeriesWhole</string>
+              <string>noteheadCowellNinthNoteSeriesHalf</string>
+              <string>noteheadCowellNinthNoteSeriesBlack</string>
+              <string>noteheadCowellEleventhNoteSeriesWhole</string>
+              <string>noteheadCowellEleventhNoteSeriesHalf</string>
+              <string>noteheadCowellEleventhSeriesBlack</string>
+              <string>noteheadCowellThirteenthNoteSeriesWhole</string>
+              <string>noteheadCowellThirteenthNoteSeriesHalf</string>
+              <string>noteheadCowellThirteenthNoteSeriesBlack</string>
+              <string>noteheadCowellFifteenthNoteSeriesWhole</string>
+              <string>noteheadCowellFifteenthNoteSeriesHalf</string>
+              <string>noteheadCowellFifteenthNoteSeriesBlack</string>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
             <string>Octaves</string>
             <key>list</key>
             <array>
@@ -2519,7 +2668,12 @@
             <key>name</key>
             <string>Olympian Sagittal extension (extreme precision) accidental diacritics</string>
             <key>list</key>
-            <array/>
+            <array>
+              <string>accSagittal1MinaUp</string>
+              <string>accSagittal1MinaDown</string>
+              <string>accSagittal2MinasUp</string>
+              <string>accSagittal2MinasDown</string>
+            </array>
           </dict>
           <dict>
             <key>name</key>
@@ -2633,6 +2787,23 @@
           </dict>
           <dict>
             <key>name</key>
+            <string>Other accidentals supplement</string>
+            <key>list</key>
+            <array>
+              <string>accidentalUpsAndDownsUp</string>
+              <string>accidentalUpsAndDownsDown</string>
+              <string>accidentalUpsAndDownsMore</string>
+              <string>accidentalUpsAndDownsLess</string>
+              <string>accidentalHabaQuarterToneHigher</string>
+              <string>accidentalHabaFlatQuarterToneHigher</string>
+              <string>accidentalHabaSharpThreeQuarterTonesHigher</string>
+              <string>accidentalHabaQuarterToneLower</string>
+              <string>accidentalHabaSharpQuarterToneLower</string>
+              <string>accidentalHabaFlatThreeQuarterTonesLower</string>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
             <string>Other baroque ornaments</string>
             <key>list</key>
             <array>
@@ -2728,6 +2899,7 @@
               <string>pluckedDampAll</string>
               <string>pluckedPlectrum</string>
               <string>pluckedDampOnStem</string>
+              <string>arpeggiato</string>
             </array>
           </dict>
           <dict>
@@ -2964,6 +3136,22 @@
               <string>noteheadSquareBlackWhite</string>
               <string>noteheadRoundBlackDoubleSlashed</string>
               <string>noteheadRoundWhiteDoubleSlashed</string>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>Scale degrees</string>
+            <key>list</key>
+            <array>
+              <string>scaleDegree1</string>
+              <string>scaleDegree2</string>
+              <string>scaleDegree3</string>
+              <string>scaleDegree4</string>
+              <string>scaleDegree5</string>
+              <string>scaleDegree6</string>
+              <string>scaleDegree7</string>
+              <string>scaleDegree8</string>
+              <string>scaleDegree9</string>
             </array>
           </dict>
           <dict>
@@ -3329,6 +3517,17 @@
               <string>stringsBowBehindBridgeTwoStrings</string>
               <string>stringsBowBehindBridgeThreeStrings</string>
               <string>stringsBowBehindBridgeFourStrings</string>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
+            <string>Techniques noteheads</string>
+            <key>list</key>
+            <array>
+              <string>swissRudimentsNoteheadBlackFlam</string>
+              <string>swissRudimentsNoteheadHalfFlam</string>
+              <string>swissRudimentsNoteheadBlackDouble</string>
+              <string>swissRudimentsNoteheadHalfDouble</string>
             </array>
           </dict>
           <dict>
