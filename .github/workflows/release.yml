@@ -10,7 +10,7 @@ jobs:
   release:
     name: Release
     if: ${{ github.repository_owner == 'delucis' }}
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     permissions:
       contents: write
       pull-requests: write
