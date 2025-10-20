@@ -38,8 +38,10 @@
     "xmlbuilder": "^15.1.1"
   },
   "dependencies": {
-    "clorox": "^1.0.3",
-    "commander": "^2.15.0",
-    "prompts": "^0.1.8"
+    "@clack/prompts": "^0.11.0",
+    "femtocolors": "^0.1.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }

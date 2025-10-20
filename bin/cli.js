@@ -1,22 +1,14 @@
 #!/usr/bin/env node
 
 // core Node imports
-const FS = require('fs')
-const PATH = require('path')
-const UTIL = require('util')
+import fs from 'node:fs/promises';
+import nodePath from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { parseArgs } from 'node:util';
 
 // required libraries
-const PROGRAM = require('commander')
-const PROMPTS = require('prompts')
-const CLOROX = require('clorox')
-
-// promise wrappers around file system operations
-const MKDIR = UTIL.promisify(FS.mkdir)
-const COPY = UTIL.promisify(FS.copyFile)
-const READF = UTIL.promisify(FS.readFile)
-
-// local variables
-const V = require('../package.json').version
+import { cancel, confirm, intro, isCancel, log } from '@clack/prompts';
+import fmt from 'femtocolors';
 
 /*
 ███████ ██    ██ ███    ██  ██████ ████████ ██  ██████  ███    ██
@@ -32,30 +24,41 @@ const V = require('../package.json').version
 ██████  ███████ ██      ██ ██   ████ ██    ██    ██  ██████  ██   ████ ███████
 */
 
-// LOGGING FUNCTIONS
-// Wrappers around console loggers for prettier formatting
-const PAD = '    '
+const helpMessage = `
+Usage: ${fmt.bold('npx smufl-glyphs-info')} ${fmt.dim('[options]')}
 
-function error (err) {
-  console.error(PAD + `${CLOROX.bold.white.bgRed(' ERROR ')} ${err}`)
-}
-function warn (warning) {
-  console.warn(PAD + `${CLOROX.bold.yellow.inverse(' WARN ')}  ${warning}`)
-}
-function info (msg) {
-  console.error(PAD + `${CLOROX.bold.white.bgBlue(' INFO ')}  ${msg}`)
-}
+Options:
+  -f, --force      install SMuFl support without user input, overwriting any existing files
+  -h, --help       display this help message
+
+Details:
+
+The Glyphs font creation software allows for the expansion of its standard
+glyph database and custom categorisation in its left sidebar by providing
+custom GlyphData-smufl.xml and Groups-smufl.plist files.
+
+This package provides files to help develop fonts using the SMuFL (Standard
+Music Font Layout) specification.
+
+These will be added to Glyphs’ Application Support directory. If there are
+any existing files that will be overwritten, this tool will offer some
+options for how to handle the conflict.
+`;
 
 /**
  * Show an initial prompt to confirm installation.
  */
-async function startPrompt () {
-  let answers = await PROMPTS([{
-    type: 'confirm',
-    name: 'install',
-    message: 'This script will set up SMuFL support in Glyphs. Do you want to continue?'
-  }])
-  if (answers.install) install()
+async function startPrompt() {
+	intro('Welcome to the SMuFL Glyphs Info Installer');
+	let shouldInstall = await confirm({
+		message: 'This script will set up SMuFL support in Glyphs 3. Do you want to continue?',
+		initialValue: false,
+	});
+	if (isCancel(shouldInstall) || !shouldInstall) {
+		cancel('Installation cancelled.');
+	} else {
+		install();
+	}
 }
 
 /**
@@ -63,35 +66,40 @@ async function startPrompt () {
  * @param  {Object}  [opts] Installation options
  * @param  {Boolean} [opts.force=false] Force the installation without checking for conflicts or requesting user input.
  */
-async function install ({ force = false } = {}) {
-  if (force) warn('Installing with --force flag. Any checks for conflicts will be skipped.')
+async function install({ force = false } = {}) {
+	if (force) log.warn('Installing with --force flag. Any checks for conflicts will be skipped.');
 
-  const FILES = [
-    '../dist/GlyphData-smufl.xml',
-    '../dist/Groups-smufl.plist'
-  ].map(path => PATH.join(__dirname, path))
+	const __dirname = fileURLToPath(new URL('.', import.meta.url));
+	const FILES = ['../dist/GlyphData-smufl.xml', '../dist/Groups-smufl.plist'].map((path) =>
+		nodePath.join(__dirname, path)
+	);
 
-  const DEST = PATH.join(
-    process.env.HOME,
-    'Library/Application Support/Glyphs/Info'
-  )
+	if (!process.env.HOME) {
+		cancel(
+			'Could not determine home directory. Please open an issue: https://github.com/delucis/smufl-glyphs-info'
+		);
+		process.exit(1);
+	}
 
-  let destExists = false
+	const DEST = nodePath.join(process.env.HOME, 'Library/Application Support/Glyphs 3/Info');
 
-  await MKDIR(DEST)
-    .then(() => {
-      info(`Created ${DEST}`)
-    })
-    .catch((err) => {
-      if (err.code !== 'EEXIST') throw err
-      destExists = true
-    })
+	let destExists = false;
 
-  if (force || !destExists) {
-    await copyResources(FILES, DEST)
-  } else {
-    await copySafely(FILES, DEST)
-  }
+	await fs
+		.mkdir(DEST)
+		.then(() => {
+			log.info(`Created ${DEST}`);
+		})
+		.catch((err) => {
+			if (err.code !== 'EEXIST') throw err;
+			destExists = true;
+		});
+
+	if (force || !destExists) {
+		await copyResources(FILES, DEST);
+	} else {
+		await copySafely(FILES, DEST);
+	}
 }
 
 /**
@@ -100,14 +108,17 @@ async function install ({ force = false } = {}) {
  * @param  {String}   [dest='']        The destination directory to copy to.
  * @param  {Boolean}  [overwrite=true] Should existing files be overwritten?
  */
-async function copyResources (files = [], dest = '', overwrite = true) {
-  const flag = overwrite ? null : FS.constants.COPYFILE_EXCL
+async function copyResources(files = [], dest = '', overwrite = true) {
+	const flag = overwrite ? undefined : fs.constants.COPYFILE_EXCL;
 
-  await Promise.all(files.map(async file => {
-    let fname = PATH.basename(file)
-    return COPY(file, PATH.join(dest, fname), flag)
-      .then(() => info(`Copied ${fname} to ${dest}`))
-  }))
+	await Promise.all(
+		files.map(async (file) => {
+			let fname = nodePath.basename(file);
+			return fs
+				.copyFile(file, nodePath.join(dest, fname), flag)
+				.then(() => log.success(`Copied ${fname} to ${dest}`));
+		})
+	);
 }
 
 /**
@@ -115,74 +126,78 @@ async function copyResources (files = [], dest = '', overwrite = true) {
  * @param  {String[]} [files=[]] The paths for the files to copy.
  * @param  {String}   [dest='']  The destination directory to copy to.
  */
-async function copySafely (files = [], dest = '') {
-  let conflicts = []
-  let safeFiles = []
+async function copySafely(files = [], dest = '') {
+	/** @type {Array<{ file: string, xml?: string }>} */
+	let conflicts = [];
+	/** @type {string[]} */
+	let safeFiles = [];
 
-  await Promise.all(files.map(async file => {
-    let data = { file }
-    let exists = true
-    let fname = PATH.basename(file)
-    let xml = await READF(PATH.join(dest, fname), 'utf8')
-      .catch((err) => {
-        if (err.code !== 'ENOENT') throw err
-        exists = false
-      })
-    if (xml) data.xml = xml
-    if (exists) {
-      conflicts.push(data)
-    } else {
-      safeFiles.push(file)
-    }
-  }))
+	await Promise.all(
+		files.map(async (file) => {
+			/** @type { { file: string, xml?: string } } */
+			let data = { file };
+			let exists = true;
+			let fname = nodePath.basename(file);
+			let xml = await fs.readFile(nodePath.join(dest, fname), 'utf8').catch((err) => {
+				if (err.code !== 'ENOENT') throw err;
+				exists = false;
+			});
+			if (xml) data.xml = xml;
+			if (exists) {
+				conflicts.push(data);
+			} else {
+				safeFiles.push(file);
+			}
+		})
+	);
 
-  await copyResources(safeFiles, dest, false)
+	await copyResources(safeFiles, dest, false);
 
-  await resolveConflicts(conflicts, dest)
+	await resolveConflicts(conflicts, dest);
 }
 
 /**
  * Try to resolve conflicts while copying files, falling back to user input.
- * @param  {Object[]} conflicts Array of objects describing conflicting files.
- * @param  {String}   dest      The destination directory to copy to.
+ * @param {{ file: string, xml?: string }[]} conflicts Array of objects describing conflicting files.
+ * @param {string} dest The destination directory to copy to.
  */
-async function resolveConflicts (conflicts, dest) {
-  let skippable = []
-  let clashing = []
+async function resolveConflicts(conflicts, dest) {
+	/** @type {Array<{ file: string, xml?: string }>} */
+	let skippable = [];
+	/** @type {Array<{ file: string, xml?: string }>} */
+	let clashing = [];
 
-  await Promise.all(conflicts.map(async conflict => {
-    let xml = await READF(conflict.file, 'utf8')
-    if (xml === conflict.xml) {
-      skippable.push(conflict)
-    } else {
-      clashing.push(conflict)
-    }
-  }))
+	await Promise.all(
+		conflicts.map(async (conflict) => {
+			let xml = await fs.readFile(conflict.file, 'utf8');
+			if (xml === conflict.xml) {
+				skippable.push(conflict);
+			} else {
+				clashing.push(conflict);
+			}
+		})
+	);
 
-  skippable.forEach(conflict => {
-    let fname = PATH.basename(conflict.file)
-    info(`Skipped copying ${fname} as it is already installed`)
-  })
+	for (const { file } of skippable) {
+		let fname = nodePath.basename(file);
+		log.info(`Skipped copying ${fmt.bold(fname)} as it is already installed`);
+	}
 
-  let prompts = clashing.map(conflict => {
-    let fname = PATH.basename(conflict.file)
-    return {
-      type: 'confirm',
-      name: conflict.file,
-      message: `A different ${fname} was found. Are you sure you want to overwrite it?`
-    }
-  })
-
-  let answers = await PROMPTS(prompts)
-
-  for (var answer in answers) {
-    if (answers[answer]) {
-      await copyResources([ answer ], dest)
-    } else {
-      let fname = PATH.basename(answer)
-      warn(`Did not copy ${fname}. It was not installed.`)
-    }
-  }
+	for (const { file } of clashing) {
+		let fname = nodePath.basename(file);
+		const shouldOverwrite = await confirm({
+			message: `A different ${fmt.bold(fname)} was found. Do you want to overwrite it?`,
+			initialValue: false,
+		});
+		if (isCancel(shouldOverwrite)) {
+			cancel('Installation cancelled.');
+			process.exit(0);
+		} else if (!shouldOverwrite) {
+			log.warn(`Did not copy ${fmt.bold(fname)}. It was not installed.`);
+		} else {
+			await copyResources([file], dest);
+		}
+	}
 }
 
 /*
@@ -200,38 +215,27 @@ async function resolveConflicts (conflicts, dest) {
 */
 
 if (process.platform !== 'darwin') {
-  error('This script is designed for use on macOS only.')
-  console.info(`        Running on macOS and seeing this error?
-        Please open an issue at ${CLOROX.underline('https://github.com/delucis/smufl-glyphs-info')}`
-  )
-  process.exit(1)
+	const repoLink = fmt.underline('https://github.com/delucis/smufl-glyphs-info');
+	cancel(
+		'This script is designed for use on macOS only.\n' +
+			'Running on macOS and seeing this error?\n' +
+			`Please open an issue at ${repoLink}`
+	);
+	process.exit(1);
 }
 
-PROGRAM
-  .name('smufl-glyphs')
-  .version(V, '-v, --version')
-  .option('-f, --force', 'install SMuFl support without user input, overwriting any existing files')
-  .on('--help', () => {
-    console.log(`
+const args = parseArgs({
+	options: {
+		force: { type: 'boolean', short: 'f', default: false },
+		help: { type: 'boolean', short: 'h', default: false },
+	},
+});
 
-  Details:
-
-  The Glyphs font creation software allows for the expansion of its standard
-  glyph database and custom categorisation in its left sidebar by providing
-  custom GlyphData-smufl.xml and Groups-smufl.plist files.
-
-  This package provides files to help develop fonts using the SMuFL (Standard
-  Music Font Layout) specification.
-
-  These will be added to Glyphs’ Application Support directory. If there are
-  any existing files that will be overwritten, this tool will offer some
-  options for how to handle the conflict.
-    `)
-  })
-  .parse(process.argv)
-
-if (PROGRAM.force) {
-  install({ force: true })
+if (args.values.help) {
+	console.log(helpMessage);
+	process.exit(0);
+} else if (args.values.force) {
+	install({ force: true });
 } else {
-  startPrompt()
+	startPrompt();
 }
