@@ -24,7 +24,7 @@ import { cancel, confirm, intro, isCancel, log } from '@clack/prompts';
 */
 
 const helpMessage = `
-Usage: smufl-glyphs [options]
+Usage: ${styleText(['bold'], 'npx smufl-glyphs-info')} ${styleText(['dim'], '[options]')}
 
 Options:
   -f, --force      install SMuFl support without user input, overwriting any existing files
@@ -50,7 +50,7 @@ options for how to handle the conflict.
 async function startPrompt() {
 	intro('Welcome to the SMuFL Glyphs Info Installer');
 	let shouldInstall = await confirm({
-		message: 'This script will set up SMuFL support in Glyphs. Do you want to continue?',
+		message: 'This script will set up SMuFL support in Glyphs 3. Do you want to continue?',
 		initialValue: false,
 	});
 	if (isCancel(shouldInstall) || !shouldInstall) {
