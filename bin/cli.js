@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // core Node imports
-import { mkdir, copyFile, readFile, constants } from 'node:fs/promises'
+import fs from 'node:fs/promises'
 import PATH from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { parseArgs, styleText } from 'node:util'
@@ -85,7 +85,7 @@ async function install ({ force = false } = {}) {
 
   let destExists = false
 
-  await mkdir(DEST)
+  await fs.mkdir(DEST)
     .then(() => {
       log.info(`Created ${DEST}`)
     })
@@ -108,11 +108,11 @@ async function install ({ force = false } = {}) {
  * @param  {Boolean}  [overwrite=true] Should existing files be overwritten?
  */
 async function copyResources (files = [], dest = '', overwrite = true) {
-  const flag = overwrite ? undefined : constants.COPYFILE_EXCL
+  const flag = overwrite ? undefined : fs.constants.COPYFILE_EXCL
 
   await Promise.all(files.map(async file => {
     let fname = PATH.basename(file)
-    return copyFile(file, PATH.join(dest, fname), flag)
+    return fs.copyFile(file, PATH.join(dest, fname), flag)
       .then(() => log.success(`Copied ${fname} to ${dest}`))
   }))
 }
@@ -133,7 +133,7 @@ async function copySafely (files = [], dest = '') {
     let data = { file }
     let exists = true
     let fname = PATH.basename(file)
-    let xml = await readFile(PATH.join(dest, fname), 'utf8')
+    let xml = await fs.readFile(PATH.join(dest, fname), 'utf8')
       .catch((err) => {
         if (err.code !== 'ENOENT') throw err
         exists = false
@@ -163,7 +163,7 @@ async function resolveConflicts (conflicts, dest) {
   let clashing = []
 
   await Promise.all(conflicts.map(async conflict => {
-    let xml = await readFile(conflict.file, 'utf8')
+    let xml = await fs.readFile(conflict.file, 'utf8')
     if (xml === conflict.xml) {
       skippable.push(conflict)
     } else {
