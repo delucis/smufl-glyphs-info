@@ -1,5 +1,13 @@
 # smufl-glyphs-info
 
+## 0.6.2
+
+### Patch Changes
+
+- [#15](https://github.com/delucis/smufl-glyphs-info/pull/15) [`bb90e31`](https://github.com/delucis/smufl-glyphs-info/commit/bb90e316030f5e48a552b9ad52b706f82da306d4) Thanks [@github-actions](https://github.com/apps/github-actions)! - Updates data with latest changes from https://github.com/w3c/smufl.
+
+  This adds support for `tupletParenthesisLeftItalic`, `tupletParenthesisRightItalic`, `tupletParenthesisLeftRoman`, `tupletParenthesisRightRoman`, `tupletBracketLeftItalic`, `tupletBracketRightItalic`, `tupletBracketLeftRoman`, and `tupletBracketRightRoman`
+
 ## 0.6.1
 
 ### Patch Changes
