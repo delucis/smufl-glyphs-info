@@ -2823,7 +2823,15 @@
   <glyph unicode="E887" name="tuplet7" sortName="SMuFL.tuplet7" category="Tuplets" script="SMuFL" production="uniE887" description="TUPLET 7"/>
   <glyph unicode="E888" name="tuplet8" sortName="SMuFL.tuplet8" category="Tuplets" script="SMuFL" production="uniE888" description="TUPLET 8"/>
   <glyph unicode="E889" name="tuplet9" sortName="SMuFL.tuplet9" category="Tuplets" script="SMuFL" production="uniE889" description="TUPLET 9"/>
+  <glyph unicode="EF14" name="tupletBracketLeftItalic" sortName="SMuFL.tupletBracketLeftItalic" category="Tuplets supplement" script="SMuFL" production="uniEF14" description="OPENING BRACKET ITALIC"/>
+  <glyph unicode="EF16" name="tupletBracketLeftRoman" sortName="SMuFL.tupletBracketLeftRoman" category="Tuplets supplement" script="SMuFL" production="uniEF16" description="OPENING BRACKET ROMAN"/>
+  <glyph unicode="EF15" name="tupletBracketRightItalic" sortName="SMuFL.tupletBracketRightItalic" category="Tuplets supplement" script="SMuFL" production="uniEF15" description="CLOSING BRACKET ITALIC"/>
+  <glyph unicode="EF17" name="tupletBracketRightRoman" sortName="SMuFL.tupletBracketRightRoman" category="Tuplets supplement" script="SMuFL" production="uniEF17" description="CLOSING BRACKET ROMAN"/>
   <glyph unicode="E88A" name="tupletColon" sortName="SMuFL.tupletColon" category="Tuplets" script="SMuFL" production="uniE88A" description="TUPLET COLON"/>
+  <glyph unicode="EF10" name="tupletParenthesisLeftItalic" sortName="SMuFL.tupletParenthesisLeftItalic" category="Tuplets supplement" script="SMuFL" production="uniEF10" description="OPENING PARENTHESIS ITALIC"/>
+  <glyph unicode="EF12" name="tupletParenthesisLeftRoman" sortName="SMuFL.tupletParenthesisLeftRoman" category="Tuplets supplement" script="SMuFL" production="uniEF12" description="OPENING PARENTHESIS ROMAN"/>
+  <glyph unicode="EF11" name="tupletParenthesisRightItalic" sortName="SMuFL.tupletParenthesisRightItalic" category="Tuplets supplement" script="SMuFL" production="uniEF11" description="CLOSING PARENTHESIS ITALIC"/>
+  <glyph unicode="EF13" name="tupletParenthesisRightRoman" sortName="SMuFL.tupletParenthesisRightRoman" category="Tuplets supplement" script="SMuFL" production="uniEF13" description="CLOSING PARENTHESIS ROMAN"/>
   <glyph unicode="E22C" name="unmeasuredTremolo" sortName="SMuFL.unmeasuredTremolo" category="Tremolos" script="SMuFL" production="uniE22C" description="WIENIAWSKI UNMEASURED TREMOLO"/>
   <glyph unicode="E22D" name="unmeasuredTremoloSimple" sortName="SMuFL.unmeasuredTremoloSimple" category="Tremolos" script="SMuFL" production="uniE22D" description="WIENIAWSKI UNMEASURED TREMOLO (SIMPLER)"/>
   <glyph unicode="E069" name="unpitchedPercussionClef1" sortName="SMuFL.unpitchedPercussionClef1" category="Clefs" script="SMuFL" production="uniE069" description="UNPITCHED PERCUSSION CLEF 1"/>
