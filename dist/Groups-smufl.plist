@@ -3726,6 +3726,21 @@
           </dict>
           <dict>
             <key>name</key>
+            <string>Tuplets supplement</string>
+            <key>list</key>
+            <array>
+              <string>tupletParenthesisLeftItalic</string>
+              <string>tupletParenthesisRightItalic</string>
+              <string>tupletParenthesisLeftRoman</string>
+              <string>tupletParenthesisRightRoman</string>
+              <string>tupletBracketLeftItalic</string>
+              <string>tupletBracketRightItalic</string>
+              <string>tupletBracketLeftRoman</string>
+              <string>tupletBracketRightRoman</string>
+            </array>
+          </dict>
+          <dict>
+            <key>name</key>
             <string>Turkish folk music accidentals</string>
             <key>list</key>
             <array>
