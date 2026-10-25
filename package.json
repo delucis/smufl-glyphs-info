@@ -1,6 +1,6 @@
 {
   "name": "smufl-glyphs-info",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Glyph data for the SMuFL specification for use inside Glyphs.app",
   "type": "module",
   "os": [
